@@ -1,0 +1,16 @@
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 1rem;
+}
+.sectionTitle {
+  font-size: var(--h5);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: start;
+  border-bottom: 3px solid var(--danger);
+  padding-bottom: 4px;
+  width: fit-content;
+}

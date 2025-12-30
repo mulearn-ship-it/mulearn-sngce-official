@@ -1,0 +1,27 @@
+
+.ongoing {
+  margin-top: 3rem;
+}
+.heading {
+  font-size: var(--h5);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: start;
+  border-bottom: 3px solid var(--danger);
+  padding-bottom: 4px;
+  width: fit-content;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}

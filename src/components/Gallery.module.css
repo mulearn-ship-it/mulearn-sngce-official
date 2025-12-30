@@ -1,0 +1,53 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  border: 3px solid black;
+  box-shadow: 6px 6px 0px black;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover effect = chunky slap feel */
+.card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: none;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid black;
+}
+
+.caption {
+  padding: 1rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: yellow;
+  border-top: 2px solid black;
+  text-align: center;
+}
+
+/* Sticker slapped on top */
+.sticker {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  padding: 0.25rem 2rem;
+  transform: rotate(-15deg);
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px black;
+}

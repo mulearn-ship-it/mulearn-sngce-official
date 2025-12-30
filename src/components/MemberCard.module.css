@@ -1,0 +1,157 @@
+/* Card wrapper */
+.card {
+  width: clamp(260px, 22vw, 340px);
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border: 3px solid #000;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 1);
+}
+
+.mediaWrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid #000;
+  background: #fff;
+  display: block;
+  position: relative;
+}
+
+.mediaWrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.05) 100%);
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* content area */
+.content {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-start;
+}
+
+.name {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  font-size: clamp(1.1rem, 2.8vw, 1.45rem);
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.card:hover .name {
+  color: #5f3dc4;
+}
+
+.role {
+  margin: 0;
+  color: #495057;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  opacity: 0.9;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .role {
+  opacity: 1;
+  color: #6c757d;
+}
+
+.image, .card {
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card:focus-within,
+.card:focus {
+  outline: 3px solid rgba(95, 61, 196, 0.4);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: clamp(240px, 40vw, 300px);
+    padding: 0.875rem;
+  }
+  
+  .name {
+    font-size: 1.15rem;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem;
+  }
+
+  .mediaWrapper {
+    aspect-ratio: 1;
+  }
+
+  .name {
+    font-size: 1.05rem;
+  }
+
+  .role {
+    font-size: 0.85rem;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+  }
+}
