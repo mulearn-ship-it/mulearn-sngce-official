@@ -1,0 +1,13 @@
+/* HomePage specific styles */
+.heroContainer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,142 @@
+.about {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e8eaed 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.leadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem auto 4rem;
+  max-width: 800px;
+}
+
+/* Stack Wrapper for horizontal card stacking */
+.stackWrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.stackContainer {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 0 2rem;
+  perspective: 1500px;
+  perspective-origin: center center;
+}
+
+.stackCard {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stackCard:hover {
+  transform: translateY(-12px) scale(1.03) rotateY(2deg) !important;
+  z-index: 9999 !important;
+  filter: brightness(1.05);
+}
+
+/* Old grid layout - kept for fallback */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+  
+  .leadGrid {
+    gap: 1.5rem;
+  }
+  
+  .stackWrapper {
+    min-height: 500px;
+  }
+  
+  .stackContainer {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .leadGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  
+  .stackWrapper {
+    min-height: auto;
+    margin-top: 3rem;
+  }
+  
+  .stackContainer {
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
+  
+  .stackCard {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2rem 0.75rem;
+  }
+  
+  .leadGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stackWrapper {
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .stackContainer {
+    gap: 1rem;
+    padding: 0 0.75rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stackCard {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+

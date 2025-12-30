@@ -1,0 +1,10 @@
+.navItem {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+

@@ -1,0 +1,146 @@
+.eventCard {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border: 4px solid black;
+  background: white;
+  padding: 16px;
+  box-shadow: 6px 6px 0 black;
+  position: relative;
+}
+
+.eventPoster img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+.eventInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eventTitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.eventSubtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 4px 0 16px;
+}
+
+.eventDetails p{
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-left: 2px solid var(--info);
+  padding-left: 0.2rem;
+  margin-bottom: 12px;
+}
+
+.eventActions {
+  margin-top: 12px;
+}
+
+.btn {
+  background: var(--danger);
+  border: 2px solid black;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 black;
+  outline: none;
+}
+
+.disabled {
+  background: #ddd;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.eventContacts {
+  font-size: 0.8rem;
+  margin-top: 12px;
+}
+
+.eventContactTitle {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.eventContacts p {
+  font-weight: bold;
+}
+
+.sticker {
+  position: absolute;
+  bottom: 22px;
+  right: -30px;
+  background: var(--success);
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 6px 30px;
+  transform: rotate(-35deg);
+  border: 2px solid black;
+  z-index: 5;
+}
+@media (max-width: 480px) {
+  .eventCard {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    border-width: 3px;
+    box-shadow: 4px 4px 0 black;
+  }
+
+  .eventPoster img {
+    width: 100%;
+    height: auto; /* scale height automatically */
+    max-height: 300px; /* optional max height */
+    object-fit: contain; /* keeps the full poster visible */
+    border-width: 1.5px;
+  }
+
+  .eventInfo {
+    width: 100%;
+  }
+
+  .eventTitle {
+    font-size: 1.2rem;
+  }
+
+  .eventSubtitle {
+    font-size: 1rem;
+    margin: 2px 0 12px;
+  }
+
+  .eventDetails p {
+    font-size: 0.8rem;
+    padding-left: 0.15rem;
+    margin-bottom: 8px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    box-shadow: 2px 2px 0 black;
+  }
+
+  .eventContacts {
+    font-size: 0.7rem;
+    margin-top: 8px;
+  }
+
+  .sticker {
+    bottom: 18px;
+    right: -20px;
+    padding: 4px 24px;
+    font-size: 0.7rem;
+  }
+}

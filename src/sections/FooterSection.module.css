@@ -1,0 +1,131 @@
+.footer {
+  background: #1a0938;
+  padding: 3rem 2rem;
+  margin-top: 0;
+  color: white;
+  border-top: none;
+  width: 100%;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.socials button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-light);
+  padding: 5px;
+  outline: none;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: var(--p);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+}
+
+.socials button img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.links h3 {
+  color: var(--danger);
+}
+
+.links ul {
+  list-style-position: unset;
+  margin: 20px;
+  /* font-weight: var(--weight-normal); */
+  padding: 0;
+  list-style: none;
+}
+
+.links ul li {
+  color: var(--border);
+  margin-top: 2px;
+  cursor: pointer;
+  padding: 4px;
+  transition: all ease 0.2s;
+}
+
+.links ul li:hover {
+  transform: translateY(-4px) translateX(-4px);
+  color: var(--muted);
+}
+
+.credit {
+    margin-top: 2rem;
+    text-align: start;
+    color: var(--muted);
+}
+
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .socials {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  .socials button {
+    padding: 6px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+  }
+
+  .links h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .links ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .links ul li {
+    font-size: 0.85rem;
+    margin-top: 2px;
+  }
+
+  .credit {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    text-align: left;
+  }
+}

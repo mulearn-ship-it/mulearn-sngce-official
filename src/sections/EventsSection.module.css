@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e8eaed 100%);
+  position: relative;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: transparent;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 4rem 1.5rem;
+  }
+  
+  .container {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 3rem 1rem;
+  }
+  
+  .container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 2rem 0.75rem;
+  }
+  
+  .container {
+    gap: 1.5rem;
+  }
+}
+
